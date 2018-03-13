@@ -1,0 +1,13 @@
+
+footer{
+	position: fixed;
+	width: 100%;
+	height: auto;
+	bottom: 0.5rem;
+	left:0;
+	right: 0;
+}
+p{
+	line-height: 0.5rem;
+	font-size: 0.28rem;
+}
