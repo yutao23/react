@@ -4,6 +4,7 @@ import psw from '../../assets/psw.svg';
 import './login.less';
 import Footer from '../../components/footer/footer'; 
 import Header from '../../components/header/header'; 
+//import request, {get} from '../../api/request';
 class App extends Component {
 constructor(props) {
     super(props);
@@ -45,7 +46,7 @@ constructor(props) {
     	
     }
   }
- 
+
   render() {
     return (
       <div className="App">
@@ -54,7 +55,7 @@ constructor(props) {
         	<form onSubmit={this.handleSubmit}>
         <div className = "user">
         	<img src={user} className="userImg" alt="user" />
-          <input  placeholder="请输入手机号" type="text" value={this.state.value} onChange={this.handleChange} />
+          <input  placeholder="请输入手机号" type="number" value={this.state.value} />
         </div>
         <div className = "psw">
         	<img src={psw} className="pswImg" alt="psw" />
