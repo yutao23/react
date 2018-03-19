@@ -4254,6 +4254,10 @@ latest-version@^3.0.0:
   dependencies:
     package-json "^4.0.0"
 
+layer@^0.1.0:
+  version "0.1.0"
+  resolved "http://registry.npm.taobao.org/layer/download/layer-0.1.0.tgz#76f8abcceec27f0fafb6c523627749c6b4ec8a1c"
+
 lazy-cache@^1.0.3:
   version "1.0.4"
   resolved "http://registry.npm.taobao.org/lazy-cache/download/lazy-cache-1.0.4.tgz#a1d78fc3a50474cb80845d3b3b6e1da49a446e8e"
