@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import user from '../../assets/login.svg';
 import psw from '../../assets/psw.svg';
 import './login.less';
+import API from '../../api/api';
 import Footer from '../../components/footer/footer'; 
 import Header from '../../components/header/header'; 
-//import request, {get} from '../../api/request';
+import Md5 from 'md5'
 class App extends Component {
 constructor(props) {
     super(props);
@@ -43,7 +44,8 @@ constructor(props) {
     }else if(pswReg.test(this.state.userPsw) === false){
     	alert('密码不符合要求');
     }else{
-    	
+    	let result =  API.ppyLogin({ params:{'user': this.state.userName,'pwd':Md5(this.state.userPsw)}});
+    	console.log(result);
     }
   }
 
@@ -55,7 +57,7 @@ constructor(props) {
         	<form onSubmit={this.handleSubmit}>
         <div className = "user">
         	<img src={user} className="userImg" alt="user" />
-          <input  placeholder="请输入手机号" type="number" value={this.state.value} />
+          <input  placeholder="请输入手机号" type="number" value={this.state.value}  onChange={this.handleChange}/>
         </div>
         <div className = "psw">
         	<img src={psw} className="pswImg" alt="psw" />
